@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CustomerOverviewComponent } from './components/customer-overview/customer-overview.component';
 import { OtherViewsComponent } from './components/other-views/other-views.component';
+import { NavbarItemComponent } from './components/navbar-item/navbar-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OtherViewsComponent } from './components/other-views/other-views.compon
     HeaderComponent,
     NavbarComponent,
     CustomerOverviewComponent,
-    OtherViewsComponent
+    OtherViewsComponent,
+    NavbarItemComponent
   ],
   imports: [
     BrowserModule,
