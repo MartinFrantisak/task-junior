@@ -6,3 +6,109 @@
   color: #000
   margin-left: 392px
   top: 100px
+.customer-overview__search-bar
+  position: absolute
+  top: 177px
+  border-radius: 3px
+  border: solid 1px #e2e7ee
+  font-size: 13px
+  width: 251px
+  height: 21px
+  margin-left: 392px
+  padding: 5px 24px 4px 29px
+  color: #9fa7bb
+  line-height: 1.62
+
+$widthHead: calc(100% - 320px - 144px)
+table
+  width: $widthHead
+  margin-left: 392px
+  top: 262px
+  position: absolute
+  text-align: left
+  border-collapse: collapse
+  tbody
+    background-color: #fff
+    border-radius: 4px
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+    border: solid 1px #e2e7ee
+    font-size: 13px
+    color: #242b39
+    line-height: 2.69
+  thead
+    border: solid 1px #e2e7ee
+    border-radius: 4px
+    background-color: #f1f4f8
+
+.customer-overview__header-item
+  padding: 9px 0
+  font-weight: bold
+  font-size: 10px
+  letter-spacing: 0.6px
+  color: #516173
+
+.center
+  text-align: center
+.right
+  text-align: right
+.status
+  border-radius: 4px
+  background-color: #cffbe9
+  font-size: 10px
+  font-weight: 500
+  line-height: 1.2
+  letter-spacing: 1px
+  text-align: center
+  color: #21985e
+  width: 62px
+  height: 16px
+  padding: 6px
+
+.customer-overview__header-item--margin-1
+  margin-left: 20px
+
+.customer-overview__grid-logo
+  margin-left: 20px
+  max-height: 24px
+  max-width: 24px
+  object-fit: contain
+  vertical-align: middle
+
+.customer-overview__grid-dropdown
+  position: relative
+  display: inline-block
+  top: 5px
+
+.customer-overview__grid-dropdown-button
+  padding: 5px 8px 4px
+  border-radius: 4px
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+  border: solid 1px #e2e7ee
+  background-color: #fff
+  cursor: pointer
+  width: 77px
+
+.customer-overview__grid-dropdown-content
+  position: absolute
+  display: none
+  background-color: #fff
+  z-index: 1
+
+.customer-overview__grid-dropdown-content a
+  height: 36px
+  font-size: 13px
+  font-weight: 500
+  line-height: 1.62
+  color: #2f3748
+  display: block
+  text-decoration: none
+  padding: 0 134px 9px 14px
+  background-color: #fff
+
+.customer-overview__grid-dropdown:hover .customer-overview__grid-dropdown-content
+  display: block
+  cursor: pointer
+
+
+.customer-overview__grid-dropdown-content a:hover
+  background-color: #f1f4f8
