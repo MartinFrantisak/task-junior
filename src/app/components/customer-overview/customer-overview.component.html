@@ -1,2 +1,44 @@
 <span class="customer-overview__title">Customer Overview</span>
+<input class="customer-overview__search-bar" placeholder="Customer or ID" type="text" oninput="search()" id="searchData">
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th class="customer-overview__header-item">CUSTOMER</th>
+      <th></th>
+      <th class="customer-overview__header-item right">COM ID</th>
+      <th class="customer-overview__header-item right">LEG ID</th>
+      <th class="customer-overview__header-item center">SIZE</th>
+      <th class="customer-overview__header-item center">STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of customers" class="pad">
+      <td class="center">
+        <img src="{{data.logo_src}}" alt="brand logo">
+      </td>
+      <td>{{data.name}}</td>
+      <td>
+        <div class="customer-overview__grid-dropdown">
+          <button class="customer-overview__grid-dropdown-button">Default</button>
+            <div class="customer-overview__grid-dropdown-content">
+              <a>Something</a>
+              <a>Something</a>
+              <a>Something</a>
+            </div>
+        </div>
+      </td>
+      <td class="right">{{data.com_id}}</td>
+      <td class="right">{{data.leg_id}}</td>
+      <td class="center">{{data.size}}</td>
+      <td class="center status">{{data.status}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
 
