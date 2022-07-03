@@ -9,20 +9,15 @@ import { HttpClient } from "@angular/common/http";
 export class CustomerOverviewComponent implements OnInit {
 
   customers: any = []
+  searchText: any
+
   sortBySize(): void {
     this.customers.sort(function(a: { size: any; }, b: { size: any; }) {
       a = a.size.toUpperCase().slice(0, -3)
       b = b.size.toUpperCase().slice(0, -3)
       return Number(b) - Number(a)
     })
-    console.log(this.customers)
   }
-
-  search(): void {
-    let c = document.getElementById("searchData")
-    console.log(c)
-  }
-
   constructor(private httpClient: HttpClient) {
   }
   ngOnInit(): void {
