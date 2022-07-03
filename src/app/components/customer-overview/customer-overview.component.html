@@ -1,26 +1,33 @@
 <span class="customer-overview__title">Customer Overview</span>
-<input class="customer-overview__search-bar" placeholder="Customer or ID" type="text" oninput="search()" id="searchData">
+<input
+  class="customer-overview__search-bar"
+  placeholder="Customer or ID"
+  type="text"
+  [(ngModel)]="searchText">
+<div class="customer-overview__add">
+  <img src="assets/images/plus.png" alt="add-button">
+</div>
 <table>
   <thead>
     <tr>
-      <td colspan="2"  class="customer-overview__header-item left">CUSTOMER</td>
+      <td colspan="2" class="customer-overview__header-item text-align-left-padding">CUSTOMER</td>
       <th></th>
-      <th class="customer-overview__header-item right">COM ID</th>
-      <th class="customer-overview__header-item right">LEG ID</th>
-      <th class="customer-overview__header-item right">
+      <th class="customer-overview__header-item text-align-right">COM ID</th>
+      <th class="customer-overview__header-item text-align-right">LEG ID</th>
+      <th class="customer-overview__header-item text-align-right">
         SIZE
-        <img src="assets/images/arrow.png" class="arrow" (click)="sortBySize()" alt="arrow-logo">
+        <img src="assets/images/arrow.png" class="arrow-icon" (click)="sortBySize()" alt="arrow-icon">
       </th>
-      <th class="customer-overview__header-item center">STATUS</th>
+      <th class="customer-overview__header-item text-align-center customer-overview__table-status--padding" >STATUS</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let data of customers" class="pad">
-      <td class="marg" style="width: 1%">
-        <img src="{{data.logo_src}}" alt="brand logo" class="customer-overview__grid-logo">
+    <tr *ngFor="let data of customers | searchFilter: searchText">
+      <td class="customer-overview__table-logo--width">
+        <img src="{{data.logo_src}}" alt="brand logo" class="customer-overview__table-logo">
       </td>
-      <td class="left" style="width: 25%">{{data.name}}</td>
-      <td>
+      <td class="text-align-left customer-overview__table-name--width">{{data.name}}</td>
+      <td class="customer-overview__table-dropdown--width">
         <div class="customer-overview__grid-dropdown">
           <button class="customer-overview__grid-dropdown-button">Default</button>
             <div class="customer-overview__grid-dropdown-content">
@@ -30,11 +37,11 @@
             </div>
         </div>
       </td>
-      <td class="right">{{data.com_id}}</td>
-      <td class="right">{{data.leg_id}}</td>
-      <td class="right">{{data.size}}</td>
-      <td class="center">
-        <span class="status">
+      <td class="text-align-right customer-overview__table-com_id--width">{{data.com_id}}</td>
+      <td class="text-align-right customer-overview__table-leg_id--width">{{data.leg_id}}</td>
+      <td class="text-align-right customer-overview__table-size--width">{{data.size}}</td>
+      <td class="text-align-center customer-overview__table-status--width">
+        <span class="customer-overview__table-status">
           {{data.status}}
         </span>
       </td>
