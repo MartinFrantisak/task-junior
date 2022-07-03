@@ -8,6 +8,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CustomerOverviewComponent } from './components/customer-overview/customer-overview.component';
 import { OtherViewsComponent } from './components/other-views/other-views.component';
 import { NavbarItemComponent } from './components/navbar-item/navbar-item.component';
+import {CustomerOverviewSearch} from "./components/customer-overview/customer-overview-search";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { NavbarItemComponent } from './components/navbar-item/navbar-item.compon
     NavbarComponent,
     CustomerOverviewComponent,
     OtherViewsComponent,
-    NavbarItemComponent
+    NavbarItemComponent,
+    CustomerOverviewSearch
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
