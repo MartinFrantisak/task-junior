@@ -4,6 +4,7 @@ import {CustomerOverviewComponent} from "./components/customer-overview/customer
 import {OtherViewsComponent} from "./components/other-views/other-views.component";
 
 const routes: Routes = [
+  {path: '', component: CustomerOverviewComponent},
   {path: 'customer-overview', component: CustomerOverviewComponent},
   {path: 'reports', component: OtherViewsComponent, data: {title: 'Reports'}},
   {path: 'file-transcoding', component: OtherViewsComponent, data: {title: 'File Transcoding'}},
