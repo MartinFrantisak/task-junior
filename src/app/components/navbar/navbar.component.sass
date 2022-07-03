@@ -15,3 +15,32 @@ $height: calc(100vh - 44px)
   letter-spacing: 0.6px
   color: #9fa7bb
   display: inline-block
+
+// media queries
+@media only screen and (max-width: 414px)
+  .navbar
+    min-width: 414px
+    height: 150px
+    margin: 0 1px 0 0
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15)
+    background-color: #fff
+    position: fixed
+    z-index: 1
+  .navbar__title
+    margin: 15px 11px 0 325px
+  .navbar__column-one
+    width: 50%
+    float: left
+    margin-left: 10px
+
+@media only screen and (max-width: 390px)
+  .navbar__title
+    margin: 15px 11px 0 310px
+  .navbar__column-one
+    margin-left: 0
+
+@media only screen and (max-width: 375px)
+  .navbar__title
+    margin: 15px 11px 0 295px
+  .navbar__column-one
+    margin-right: -15px
