@@ -6,6 +6,7 @@
   color: #000
   margin-left: 392px
   top: 100px
+
 .customer-overview__search-bar
   position: absolute
   top: 180px
@@ -13,11 +14,23 @@
   border: solid 1px #e2e7ee
   font-size: 13px
   width: 251px
-  height: 21px
+  height: 30px
   margin-left: 392px
   padding: 10px 24px 10px 29px
   color: #9fa7bb
   line-height: 1.62
+  background-color: white
+
+input
+  height: 16px
+  width: 16px
+  background: transparent url("search.png") no-repeat 6px
+  opacity: 0.8
+input:focus
+  outline: none !important
+  border: 1px solid #9fa7bb
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+  opacity: 1
 
 $widthHead: calc(100% - 320px - 144px)
 table
@@ -28,14 +41,13 @@ table
   text-align: left
   border-collapse: collapse
   border-radius: 10px
-
   tbody
     background-color: #fff
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
     border: solid 1px #e2e7ee
     font-size: 13px
     color: #242b39
-    line-height: 2.69
+    line-height: 3.2
   thead
     border: solid 1px #e2e7ee
     border-radius: 10px
@@ -53,11 +65,7 @@ table
   letter-spacing: 0.6px
   color: #516173
 
-.center
-  text-align: center
-.right
-  text-align: right
-.status
+.customer-overview__table-status
   border-radius: 4px
   background-color: #cffbe9
   font-size: 10px
@@ -68,11 +76,9 @@ table
   color: #21985e
   width: 62px
   height: 16px
-  padding: 2px 4px 2px 5px
-.customer-overview__header-item--margin-1
-  margin-left: 20px
+  padding: 3px 9px 3px 9px
 
-.customer-overview__grid-logo
+.customer-overview__table-logo
   margin-left: 20px
   max-height: 24px
   max-width: 24px
@@ -100,16 +106,16 @@ table
   background-color: #fff
   z-index: 1
   box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px
+  height: 36px
 
 .customer-overview__grid-dropdown-content a
-  height: 36px
   font-size: 13px
   font-weight: 500
   line-height: 1.62
   color: #2f3748
   display: block
   text-decoration: none
-  padding: 8px 134px 9px 14px
+  padding: 9px 134px 9px 14px
   background-color: #fff
   font-family: 'Poppins', sans-serif
 
@@ -120,14 +126,177 @@ table
 .customer-overview__grid-dropdown-content a:hover
   background-color: #f1f4f8
 
-.arrow
+.arrow-icon
   width: 9px
   height: 9px
   object-fit: contain
   cursor: pointer
 
-.left
+.text-align-left-padding
   text-align: left
   padding-left: 20px
 
+.text-align-left
+  text-align: left
+.text-align-center
+  text-align: center
+.text-align-right
+  text-align: right
+
+.customer-overview__table-logo--width
+  width: 4%
+.customer-overview__table-name--width
+  width: 20%
+.customer-overview__table-size--width
+  width: 13%
+.customer-overview__table-com_id--width
+  width: 15%
+.customer-overview__table-leg_id--width
+  width: 15%
+.customer-overview__table-dropdown--width
+  width: 20%
+.customer-overview__table-status--width
+  width: 13%
+  padding-left: 50px
+.customer-overview__table-status--padding
+  padding-left: 50px
+
+$marginAdd: calc(#{$widthHead} + 360px)
+.customer-overview__add
+  position: absolute
+  width: 30px
+  height: 30px
+  top: 180px
+  margin-left: $marginAdd
+  padding: 7px 7px 7px 7px
+  border-radius: 15px
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2)
+  background-color: #407cff
+  img
+    width: 16px
+    height: 16px
+    object-fit: contain
+
+// media queries
+@media only screen and (max-width: 1800px)
+  .customer-overview__table-logo--width
+    width: 5%
+@media only screen and (max-width: 1600px)
+  .customer-overview__table-status--width
+    width: 12%
+    padding-left: 40px
+  .customer-overview__table-status--padding
+    padding-left: 40px
+@media only screen and (max-width: 1500px)
+  .customer-overview__table-logo--width
+    width: 6%
+  .customer-overview__table-name--width
+    width: 25%
+  .customer-overview__table-com_id--width
+    width: 13%
+  .customer-overview__table-leg_id--width
+    width: 13%
+  .customer-overview__table-status--width
+    width: 12%
+    padding-left: 25px
+  .customer-overview__table-status--padding
+    padding-left: 25px
+@media only screen and (max-width: 1350px)
+  .customer-overview__table-logo--width
+    width: 7%
+  .customer-overview__table-com_id--width
+    width: 11%
+  .customer-overview__table-leg_id--width
+    width: 11%
+  .customer-overview__table-status--width
+    width: 12%
+    padding-left: 20px
+  .customer-overview__table-status--padding
+    padding-left: 20px
+@media only screen and (max-width: 1200px)
+  .customer-overview__table-logo--width
+    width: 8%
+  .customer-overview__table-com_id--width
+    width: 8%
+  .customer-overview__table-leg_id--width
+    width: 8%
+  .customer-overview__table-name--width
+    width: 25%
+  .customer-overview__table-dropdown--width
+    width: 15%
+  .customer-overview__table-status--width
+    width: 12%
+    padding-left: 10px
+  .customer-overview__table-status--padding
+    padding-left: 10px
+
+$tableWidth: calc(100% - 30px)
+@media only screen and (max-width: 414px)
+  table
+    top: 250px
+    position: absolute
+    width: $tableWidth
+    margin-left: 15px
+    tbody
+      font-size: 10px
+  .customer-overview__title
+    top: 194px
+    font-size: 15px
+    position: fixed
+    width: $tableWidth
+    padding: 10px 0 10px 15px
+    margin-left: 15px
+    z-index: 1
+    background-color: #f1f4f8
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px
+  .customer-overview__search-bar
+    top: 194px
+    margin-left: 185px
+    position: fixed
+    z-index: 1
+    width: 160px
+    border-radius: 4px
+    margin-top: 5px
+  .customer-overview__table-name--width
+    display: inline
+  .customer-overview__table-status--width
+    width: 1%
+  .customer-overview__grid-dropdown-button
+    font-size: 11px
+    padding: 2px 5px 2px 5px
+    width: 50px
+  .customer-overview__table-logo
+    margin-left: 5px
+  .left
+    padding-left: 10px
+  .customer-overview__table-status
+    width: 42px
+    height: 12px
+    padding: 3px 5px 3px 5px
+    font-size: 8px
+    margin-right: 5px
+
+  .customer-overview__table-status--padding
+    padding-left: 0
+  .customer-overview__header-item
+    letter-spacing: 0
+    font-size: 8px
+  .customer-overview__add
+    position: fixed
+    z-index: 1
+    top: 200px
+    margin-left: 360px
+
+@media only screen and (max-width: 390px)
+  .customer-overview__search-bar
+    margin-left: 175px
+    width: 150px
+  .customer-overview__add
+    margin-left: 335px
+
+@media only screen and (max-width: 375px)
+  .customer-overview__add
+    margin-left: 325px
+  .customer-overview__search-bar
+    width: 145px
 
