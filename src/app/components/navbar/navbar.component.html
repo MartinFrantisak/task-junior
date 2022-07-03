@@ -1,19 +1,27 @@
 <nav class="navbar">
   <span class='navbar__title'>SITE ADMIN</span>
-  <app-navbar-item
-    title="Customer Overview"
-    routerLink="customer-overview">
-  </app-navbar-item>
-  <app-navbar-item
-    title="Reports"
-    routerLink="reports">
-  </app-navbar-item>
-  <app-navbar-item
-    title="File Transcoding"
-    routerLink="file-transcoding">
-  </app-navbar-item>
-  <app-navbar-item
-    title="Notification Center"
-    routerLink="notification-center">
-  </app-navbar-item>
+  <div class="navbar__column-one">
+    <app-navbar-item
+      title="Customer Overview"
+      logo_src="assets/images/online.png"
+      routerLink="customer-overview">
+    </app-navbar-item>
+    <app-navbar-item
+      title="Reports"
+      logo_src="assets/images/list-dot.png"
+      routerLink="reports">
+    </app-navbar-item>
+  </div>
+  <div>
+    <app-navbar-item
+      title="File Transcoding"
+      logo_src="assets/images/file-add.png"
+      routerLink="file-transcoding">
+    </app-navbar-item>
+    <app-navbar-item
+      title="Notification Center"
+      logo_src="assets/images/notification.png"
+      routerLink="notification-center">
+    </app-navbar-item>
+  </div>
 </nav>
