@@ -1,3 +1,4 @@
+// classes
 .other-views__title
   position: absolute
   font-size: 31px
@@ -5,3 +6,17 @@
   color: #000
   margin-left: 392px
   top: 100px
+
+$tableWidth: calc(100% - 30px)
+// media queries
+@media only screen and (max-width: 414px)
+  .other-views__title
+    top: 195px
+    font-size: 15px
+    position: fixed
+    width: $tableWidth
+    padding: 10px 0 10px 15px
+    margin-left: 15px
+    z-index: 1
+    background-color: #f1f4f8
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px
